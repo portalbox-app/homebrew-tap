@@ -18,7 +18,7 @@ class Portalbox < Formula
 
   def install
     libexec.install Dir["*"]
-    (bin/"portalbox").write_env_script(libexec/"portalbox", :PORTALBOX_RUNTIME_DIR => libexec/)
+    (bin/"portalbox").write_env_script(libexec/"portalbox", :PORTALBOX_RUNTIME_DIR => libexec)
   end
 
   test do
