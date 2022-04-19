@@ -6,19 +6,19 @@ class Portalbox < Formula
   
   on_macos do
     url "https://github.com/portalbox-app/portalbox/releases/download/v#{version}/portalbox-#{version}-macos-x64.tar.gz"
-    sha256 "671b9117ec3ac65bd8bc9d992d8191c249d54ae1628691e7931766c24fc26af0"
+    sha256 "3ecfb6973b6fb11094cbefe04ea24de67941428ce6d21e57c549dbc95f84838f"
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/portalbox-app/portalbox/releases/download/v#{version}/portalbox-#{version}-linux-x64.tar.gz"
-      sha256 "0371960515dc4a39c57b4cc85b5dc593bb349a9253d715e8dd79b1e3faa5280f"
+      sha256 "4a0eff78a29e32505941ff742a60b96ec48a531b59c6288bfe13472a50e8e369"
     end
   end
 
   def install
     libexec.install Dir["*"]
-    bin.write_exec_script libexec/"client"
+    (bin/"portalbox").write_env_script(libexec/"portalbox", :PORTALBOX_RUNTIME_DIR => libexec/)
   end
 
   test do
