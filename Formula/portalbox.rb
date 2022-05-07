@@ -6,13 +6,13 @@ class Portalbox < Formula
   
   on_macos do
     url "https://github.com/portalbox-app/portalbox/releases/download/v#{version}/portalbox-#{version}-macos-x64.tar.gz"
-    sha256 "06f3da59e0d16e74b1d53aea94d7826dfd74c45718fd453fbf3db74309bf7bc5"
+    sha256 "2e6459aa15fcdc7e54c2195f5ee7355c23aa4a64f667764a44a5f6abc4555a36"
   end
 
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/portalbox-app/portalbox/releases/download/v#{version}/portalbox-#{version}-linux-x64.tar.gz"
-      sha256 "5d844b1c231bb89d5081f64bd7f1a98d78ecf147e5208a5e217e00856d8d1b1e"
+      sha256 "05d786c632d1278329dc44a7ec005dd78c29d61fcd34d5b9021279f4f44292f9"
     end
   end
 
