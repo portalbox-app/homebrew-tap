@@ -1,10 +1,10 @@
 # Portalbox-app Tap
 
-## How do I install these formulae?
-
-`brew install portalbox-app/tap/<formula>`
-
-Or `brew tap portalbox-app/tap` and then `brew install <formula>`.
+## How do I install PortalBox?
+```
+brew tap portalbox-app/tap
+brew install portalbox
+```
 
 ## Documentation
 
